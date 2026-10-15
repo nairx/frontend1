@@ -6,22 +6,28 @@ import AdminLayout from "../layouts/AdminLayout";
 import Dashboard from "../pages/Dashboard";
 import Logout from "../pages/Logout";
 import Users from "../pages/admin/users/Users";
+import Register from "../pages/Register";
+import AddUser from "../pages/admin/users/AddUser"
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/login", element: <Login /> },
+  {path:"/register", element: <Register/>},
+
   { path: "/logout", element: <Logout /> },
+
+  {
+    path: "admin",
+    element: <AdminLayout />,
+    children: [{ index: true, element: <Users /> },
+      {path:"add-user",element:<AddUser/>}
+    ],
+  },
+
   {
     path: "/user",
     element: <RootLayout />,
-    children: [
-      { index: true, element: <Dashboard /> },
-      {
-        path: "admin",
-        element: <AdminLayout />,
-        children: [{ index: true, element: <Users /> }],
-      },
-    ],
+    children: [{ index: true, element: <Dashboard /> }],
   },
 ]);
 

@@ -7,6 +7,11 @@ export default function Login() {
     navigate("/user");
   };
 
+
+  const handleRegister = () => {
+    navigate("/register")
+  }
+
   return (
     <div className="login-row">
       <div className="login-row-left">
@@ -18,7 +23,7 @@ export default function Login() {
         </div>
         <div>
         
-          <button className="register-button">Register Now</button>
+          <button className="register-button" onClick={handleRegister}> Register Now</button>
           <button className="activate-button">Activate</button>
         </div>
         <div>
