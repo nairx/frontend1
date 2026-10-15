@@ -28,30 +28,7 @@ export default function AddUser() {
           />
         </p>
 
-        <p>
-          <input
-            type="number"
-            placeholder="Phone"
-            onChange={(e) => setObj({ ...obj, phone: e.target.value })}
-          />
-        </p>
-
-        <p>
-          <input
-            type="text"
-            placeholder="Address"
-            onChange={(e) => setObj({ ...obj, address: e.target.value })}
-          />
-        </p>
-
-        <p>
-          <input
-            type="number"
-            placeholder="Initial Balance"
-            onChange={(e) => setObj({ ...obj, balance: e.target.value })}
-          />
-        </p>
-
+    
         <p>
           <input
             type="password"
