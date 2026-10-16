@@ -28,7 +28,7 @@ export default function Dashboard() {
         Account {account.id} - {account.balance}
       </h2>
       <p>
-        <Link to="/send-money">Send Money</Link>
+        <Link to="/user/send-money">Send Money</Link>
       </p>
     </div>
   );

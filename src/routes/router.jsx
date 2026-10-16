@@ -7,27 +7,32 @@ import Dashboard from "../pages/Dashboard";
 import Logout from "../pages/Logout";
 import Users from "../pages/admin/users/Users";
 import Register from "../pages/Register";
-import AddUser from "../pages/admin/users/AddUser"
+import AddUser from "../pages/admin/users/AddUser";
+import SendMoney from "../pages/SendMoney";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/login", element: <Login /> },
-  {path:"/register", element: <Register/>},
+  { path: "/register", element: <Register /> },
 
   { path: "/logout", element: <Logout /> },
 
   {
     path: "admin",
     element: <AdminLayout />,
-    children: [{ index: true, element: <Users /> },
-      {path:"add-user",element:<AddUser/>}
+    children: [
+      { index: true, element: <Users /> },
+      { path: "add-user", element: <AddUser /> },
     ],
   },
 
   {
-    path: "/user",
+    path: "user",
     element: <RootLayout />,
-    children: [{ index: true, element: <Dashboard /> }],
+    children: [
+      { index: true, element: <Dashboard /> },
+      { path: "send-money", element: <SendMoney /> },
+    ],
   },
 ]);
 
